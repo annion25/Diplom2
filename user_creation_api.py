@@ -32,6 +32,7 @@ class UserCreation:
             email_pass.append(r["accessToken"])
         return email_pass, response
 
+    @allure.step("Отправляем запрос на создание пользователя с заданными логином, паролем, именем")
     def register_user_with_given_data_and_return_response(self, email, password, name):
         payload = {
             "email": email,
